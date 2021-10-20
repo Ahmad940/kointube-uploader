@@ -8,12 +8,15 @@ import (
 	"github.com/cloudinary/cloudinary-go"
 	"github.com/cloudinary/cloudinary-go/api/uploader"
 	"github.com/gofiber/fiber/v2"
+	"github.com/gofiber/fiber/v2/middleware/cors"
 	_ "github.com/joho/godotenv/autoload"
 	gonanoid "github.com/matoous/go-nanoid/v2"
 )
 
 func main() {
 	app := fiber.New()
+
+	app.use(cors.New())
 
 	var cld, err = cloudinary.New()
 	if err != nil {
