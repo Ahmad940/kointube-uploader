@@ -16,7 +16,7 @@ import (
 func main() {
 	app := fiber.New()
 
-	app.use(cors.New())
+	app.Use(cors.New())
 
 	var cld, err = cloudinary.New()
 	if err != nil {
