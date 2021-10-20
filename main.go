@@ -47,7 +47,7 @@ func main() {
 		uploadResult, err := cld.Upload.Upload(
 			ctx,
 			tempFile,
-			uploader.UploadParams{PublicID: id, Folder: "kointube/video"})
+			uploader.UploadParams{PublicID: id, Folder: "kointube/videos"})
 		if err != nil {
 			log.Fatalf("Failed to upload file, %v\n", err)
 		}
@@ -78,7 +78,7 @@ func main() {
 		uploadResult, err := cld.Upload.Upload(
 			ctx,
 			tempFile,
-			uploader.UploadParams{PublicID: id, Folder: "kointube/image"})
+			uploader.UploadParams{PublicID: id, Folder: "kointube/images"})
 		if err != nil {
 			log.Fatalf("Failed to upload file, %v\n", err)
 		}
